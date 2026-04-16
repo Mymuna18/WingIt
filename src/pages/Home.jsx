@@ -9,7 +9,7 @@ function Home() {
     // Start intro animation immediately
     const timer = setTimeout(() => {
       setShowContent(true); 
-    }, 1500);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
