@@ -1,16 +1,71 @@
-# React + Vite
+# ✈️ WingIt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A spontaneous trip planner that builds a smart, weather-aware day-by-day itinerary for any city — in seconds.
 
-Currently, two official plugins are available:
+## What It Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Enter a city, pick what you're into (food, art, adventure, etc.), choose your travel dates, and hit **WingIt**. The app finds real places near you, checks the weather forecast, and builds a personalized schedule — putting indoor spots on rainy days and outdoor ones on sunny days.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🗺️ **Place Discovery** — Fetches real places via the Geoapify API based on your preferences, within 5km of the city center
+- ⛅ **Weather-Aware Scheduling** — Uses live forecasts (up to 16 days) or historical climate averages for further-out trips
+- 🧠 **Smart Itinerary Builder** — Distributes places across your trip days, prioritizing indoor venues on bad weather days
+- 🕐 **Opening Hours** — Pulls live opening hours from OpenStreetMap via the Overpass API
+- 🚶 **Walking Distances** — Shows real walking distances between stops using the OSRM routing engine
+- 💾 **Save & Reload Trips** — Save any itinerary and reload it later from the Saved Trips page
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** + **Vite**
+- **React Router** for navigation
+- **Geoapify** — place search
+- **Nominatim (OpenStreetMap)** — city geocoding
+- **Open-Meteo** — weather forecasts & climate data
+- **Overpass API** — opening hours from OpenStreetMap
+- **OSRM** — walking distance routing
+- **localStorage** — saving trips
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run the dev server
+npm run dev
+```
+
+## Usage
+
+1. Type a city name and select your preferences (food, art, adventure, activities, tourist)
+2. Click **Go** to fetch nearby places
+3. Select the places you want to visit
+4. Pick your travel dates
+5. Hit **✨ WingIt!** to generate your schedule
+6. Click **💾 Save Trip** to save it for later
+
+## Project Structure
+
+```
+src/
+├── pages/
+│   ├── Home.jsx      # Animated landing page
+│   ├── Plan.jsx      # Main trip planning page
+│   └── Saved.jsx     # Saved trips viewer
+└── App.jsx           # Router setup
+```
+
+## APIs Used
+
+| API | Purpose | Cost |
+|-----|---------|------|
+| Geoapify | Place search | Free tier |
+| Nominatim | Geocoding | Free |
+| Open-Meteo | Weather | Free |
+| Overpass | Opening hours | Free |
+| OSRM | Walking routes | Free |
+
+## License
+
+MIT
