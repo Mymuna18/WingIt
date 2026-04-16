@@ -1,0 +1,58 @@
+/* src/pages/Plan.css */
+
+.plan-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f0f9ff; /* light blue */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #3b82f6;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.checkboxes label {
+  margin-right: 15px;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+.wingit-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s;
+}
+
+.wingit-btn:hover {
+  transform: scale(1.05);
+}
+
+.results-placeholder {
+  margin-top: 30px;
+  color: #1e3a8a;
+}

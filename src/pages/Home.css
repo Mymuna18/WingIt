@@ -1,0 +1,71 @@
+/* src/pages/Home.css */
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: #e0f2ff; /* light blue background */
+  position: relative;
+}
+
+.zoom-out-img {
+  width: 120%;
+  transition: transform 2s ease;
+  transform: scale(1.2);
+}
+
+.home-container img {
+  animation: zoomOut 2s forwards;
+}
+
+@keyframes zoomOut {
+  from { transform: scale(1.2); }
+  to { transform: scale(1); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content h1 {
+  color: #1e3a8a; /* dark blue */
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  margin: 0 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.plan-btn {
+  background-color: #3b82f6; /* medium blue */
+  color: white;
+}
+
+.saved-btn {
+  background-color: #60a5fa; /* lighter blue */
+  color: white;
+}

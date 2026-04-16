@@ -1,0 +1,28 @@
+/* src/pages/Saved.css */
+
+.saved-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f0f9ff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #60a5fa; /* medium blue */
+  color: white;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
