@@ -43,7 +43,7 @@ npm run dev
 3. Select the places you want to visit
 4. Pick your travel dates
 5. Hit **✨ WingIt!** to generate your schedule
-6. Click **💾 Save Trip** to save it for later
+6. Click **💾 Save Trip** to save it for later.
 
 ## Project Structure
 
